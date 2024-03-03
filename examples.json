@@ -1,0 +1,71 @@
+[
+    {
+        "api": "completions",
+        "queries": [
+            {
+                "include_sources": false,
+                "prompt": "Count to 5 in Japanese",
+                "stream": true,
+                "system_prompt": "Be accurate, be concise, no greetings, translations, or salutations",
+                "use_context": false
+            },
+            {
+                "include_sources": false,
+                "prompt": "Count to 5 in French",
+                "stream": true,
+                "system_prompt": "Be accurate, , be concise,  no greetings, translations, or salutations",
+                "use_context": false
+            }
+        ]
+    },
+    {
+        "api": "chat/completions",
+        "queries": [
+            {
+                "description": "Count to 5 in Japanese, stream, no context",
+                "include_sources": false,
+                "messages": [
+                    {
+                      "content": "Be accurate, be concise, no greetings, translations, or salutations",
+                      "role": "system"
+                    },
+                    {
+                      "content": "Count to 5 in Japanese",
+                      "role": "user"
+                    }
+                  ],
+                  "stream": true,
+                  "use_context": false
+            },
+            {
+                "description": "Count to 5 in French, stream, no context",
+                "include_sources": false,
+                "messages": [
+                    {
+                      "content": "Be accurate, be concise, no greetings, translations, or salutations",
+                      "role": "system"
+                    },
+                    {
+                      "content": "Count to 5 in French",
+                      "role": "user"
+                    }
+                  ],
+                  "stream": true,
+                  "use_context": false
+            }
+        ]
+    },
+    {
+        "api": "ingest/file",
+        "queries": [
+            {
+                "description": "Ingest Frankenstein",
+                "file":"data/guttenburg/txt/pg84.txt"
+            },
+            {
+                "description": "Ingest Moby Dick",
+                "file":"data/guttenburg/txt/pg2701.txt"
+            }
+        ]
+    }
+]

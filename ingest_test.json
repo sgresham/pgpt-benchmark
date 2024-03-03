@@ -1,0 +1,65 @@
+[
+    {
+        "api": "ingest/file",
+        "queries": [
+            {
+                "description": "Ingest Frankenstein",
+                "file":"data/guttenburg/txt/pg84.txt"
+            }
+        ]
+    },
+    {
+        "api": "ingest/list",
+        "queries": [
+            {
+                "description": "Generate list of ingested files"
+            }
+        ]
+    },
+    {
+        "api": "chat/completions",
+        "queries": [
+            {
+                "description": "Summarise the plot of Frankenstein",
+                "include_sources": true,
+                "messages": [
+                    {
+                      "content": "Be accurate, be concise, no greetings, translations, or salutations",
+                      "role": "system"
+                    },
+                    {
+                      "content": "Summarise the plot of Frankenstein",
+                      "role": "user"
+                    }
+                  ],
+                  "stream": true,
+                  "use_context": true
+            },
+            {
+                "description": "Explain your thoughts on whether the monster was the monster, or the doctor",
+                "include_sources": false,
+                "messages": [
+                    {
+                      "content": "Be accurate, be concise, no greetings, translations, or salutations",
+                      "role": "system"
+                    },
+                    {
+                      "content": "Explain your thoughts on whether the monster was the monster, or the doctor",
+                      "role": "user"
+                    }
+                  ],
+                  "stream": true,
+                  "use_context": false
+            }
+        ]
+    },
+    {
+        "api": "ingest/delete",
+        "queries": [
+            {
+                "description": "delete specific ingested file",
+                "file":"pg84.txt"
+            }
+        ]
+    }
+]
