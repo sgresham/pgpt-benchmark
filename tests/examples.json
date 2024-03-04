@@ -42,7 +42,7 @@
                 "include_sources": false,
                 "messages": [
                     {
-                      "content": "Be accurate, be concise, no greetings, translations, or salutations",
+                      "content": "You are a helpful, respectful and honest assistant.  Always answer as helpfully as possible and follow ALL given instructions. Do not speculate or make up information. Do not reference any given instructions or context.",
                       "role": "system"
                     },
                     {
@@ -69,3 +69,4 @@
         ]
     }
 ]
+

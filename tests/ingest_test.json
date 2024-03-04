@@ -9,18 +9,10 @@
         ]
     },
     {
-        "api": "ingest/list",
-        "queries": [
-            {
-                "description": "Generate list of ingested files"
-            }
-        ]
-    },
-    {
         "api": "chat/completions",
         "queries": [
             {
-                "description": "Summarise the plot of Frankenstein",
+                "description": "Summarize the plot of Frankenstein",
                 "include_sources": true,
                 "messages": [
                     {
@@ -28,12 +20,13 @@
                       "role": "system"
                     },
                     {
-                      "content": "Summarise the plot of Frankenstein",
+                      "content": "Summarize the plot of Frankenstein",
                       "role": "user"
                     }
                   ],
                   "stream": true,
-                  "use_context": true
+                  "use_context": true,
+                  "persistent": true
             },
             {
                 "description": "Explain your thoughts on whether the monster was the monster, or the doctor",
@@ -49,7 +42,8 @@
                     }
                   ],
                   "stream": true,
-                  "use_context": false
+                  "use_context": true,
+                  "persistent": true
             }
         ]
     },

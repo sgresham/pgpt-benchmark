@@ -1,0 +1,41 @@
+[
+  {
+    "api": "chat/completions",
+    "queries": [
+      {
+        "description": "Count to 5 in Japanese, stream, no context",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Be accurate, be concise, no greetings, translations, or salutations",
+            "role": "system"
+          },
+          {
+            "content": "Count to 5 in Japanese",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": false,
+        "persistent": true
+      },
+      {
+        "description": "Count to 5 in Japanese backwards, stream, no context",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Be accurate, be concise, no greetings, translations, or salutations",
+            "role": "system"
+          },
+          {
+            "content": "Do the same, but backwards",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": false,
+        "persistent": true
+      }
+    ]
+  }
+]
