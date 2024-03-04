@@ -5,10 +5,10 @@ usage example
 python main.py --hostname 127.0.0.1 --port 8001 --file ingest_test.json --verbose
 
 ENV_VARS
---hostname", default="localhost", help="Hostname (default: localhost)"
---port", type=int, default=8001, help="Port (default: 8001)"
---verbose", action="store_true", help="Verbose output"
---file", default="data.json", help="test filename and path (default: data.json)"
+* --hostname", default="localhost", help="Hostname (default: localhost)"
+* --port", type=int, default=8001, help="Port (default: 8001)"
+* --verbose", action="store_true", help="Verbose output"
+* --file", default="data.json", help="test filename and path (default: data.json)"
 
 Relating to Chat/Completions, there are several options that you can modify.
 
@@ -25,7 +25,7 @@ These can be chained, for example, first ingest, then query, then remove ingest
 ## Completions
 ### Not normally used, likely want to use chat/completions
 ### This example is using no context, and streams the result
-
+```
 {
         "api": "completions",
         "queries": [
@@ -39,10 +39,10 @@ These can be chained, for example, first ingest, then query, then remove ingest
             }
         ]
     }
-
+```
 ## Chat/Completions
 ### This example is using no context, and streams the result
-
+```
 {
         "api": "chat/completions",
         "queries": [
@@ -65,9 +65,10 @@ These can be chained, for example, first ingest, then query, then remove ingest
             }
         ]
     }
-
+```
 ## Ingest/File
 ### This example ingests a file from guttenburg
+```
 {
         "api": "ingest/file",
         "queries": [
@@ -77,9 +78,10 @@ These can be chained, for example, first ingest, then query, then remove ingest
             }
         ]
     }
-
+```
 ## Ingest/Delete
 ### This will delete an ingested file. Be aware that it will search by filename and delete every instance of the file.
+```
 {
         "api": "ingest/delete",
         "queries": [
@@ -89,4 +91,4 @@ These can be chained, for example, first ingest, then query, then remove ingest
             }
         ]
 }
-
+```
