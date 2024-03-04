@@ -10,6 +10,15 @@ ENV_VARS
 --verbose", action="store_true", help="Verbose output"
 --file", default="data.json", help="test filename and path (default: data.json)"
 
+Relating to Chat/Completions, there are several options that you can modify.
+
+* description": "string" # This is purely for verbose output, to show which step is being run,
+* "include_sources": "boolean" # will output the source referenced by the LLM (may not be working)
+* "stream": "boolean" # will stream text if enabled, and if verbose is enabled
+* "use_context": "boolean" # will use ingested data if enabled
+* "persistent": "boolean" # will pass on previous chat to the engine (may be glitchy)
+
+
 test examples
 These can be chained, for example, first ingest, then query, then remove ingest
 
@@ -51,7 +60,8 @@ These can be chained, for example, first ingest, then query, then remove ingest
                     }
                   ],
                   "stream": true,
-                  "use_context": false
+                  "use_context": false,
+                  "persistent": true
             }
         ]
     }
