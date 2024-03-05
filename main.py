@@ -3,7 +3,7 @@ import requests
 import json
 import time
 
-def query_api(api_data, hostname="localhost", port=8001, verbose=False):
+def query_api(api_data, hostname="localhost", port=8001, verbose=False, debug=False):
     results = []
     previous_messages = ''
 
@@ -56,18 +56,20 @@ def query_api(api_data, hostname="localhost", port=8001, verbose=False):
                         if message["role"] == "user":
                             user_message = message["content"]
                             if params['persistent']:
-                                message["content"] += " " + previous_messages
+                                message["content"] += "\n" + previous_messages
+                            if debug:
+                                print(f"###Full context fed to LLM###\n {message['content']} \n ###End of Full Context### \n")
                     start_time = time.time()  # Record start time
                     with requests.post(url, json=params, headers=headers, verify=False, stream=params["stream"]) as response:
                         if response.status_code == 200:
                             if verbose:
-                                print(f"USER_MESSAGE: {user_message}")
+                                print(f"USER_MESSAGE: {user_message}\n")
                             for line in response.iter_lines():
                                 if line:
                                     if line.startswith(b"data:"):
                                         line = line[len(b"data:"):].strip()
                                     if line == b"[DONE]":
-                                        print("API RESPONSE COMPLETED")
+                                        print("\nAPI RESPONSE COMPLETED\n\n")
                                         break
                                     if params["stream"]:
                                         try:
@@ -94,7 +96,7 @@ def query_api(api_data, hostname="localhost", port=8001, verbose=False):
                     end_time = time.time()  # Record end time
                     elapsed_time = end_time - start_time
                     if params['persistent']:
-                        previous_messages += "\nprevious chats for reference " + user_message + ' ' + full_response 
+                        previous_messages += full_response # + user_message + ' '
                     results.append({"prompt": params["description"],
                                     "time_elapsed": elapsed_time
                                      })
@@ -161,12 +163,13 @@ if __name__ == "__main__":
     parser.add_argument("--hostname", default="localhost", help="Hostname (default: localhost)")
     parser.add_argument("--port", type=int, default=8001, help="Port (default: 8001)")
     parser.add_argument("--verbose", action="store_true", help="Verbose output")
+    parser.add_argument("--debug", action="store_true", help="Extra Verbose output")
     parser.add_argument("--file", default="data.json", help="test filename and path (default: data.json)")
     args = parser.parse_args()
 
     with open(args.file, "r") as file:
         api_data = json.load(file)
 
-    query_results = query_api(api_data, args.hostname, args.port, args.verbose)
+    query_results = query_api(api_data, args.hostname, args.port, args.verbose, args.debug)
     for result in query_results:
         print(f"Time elapsed for prompt {result['prompt']}: {result['time_elapsed']} seconds")

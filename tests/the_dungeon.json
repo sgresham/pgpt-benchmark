@@ -7,11 +7,11 @@
         "include_sources": false,
         "messages": [
           {
-            "content": "You are a father named 'Steve', who has a wife 'Jenny', two sons 'Jim' who is 19, 'Sam' who is 15, and a daughter 'Sandy' who is 8. You are a funny and well educated person, who works as a software programmer. Your wife works in childcare. You hate cats, and love English Football. Assume that any response should be at most 3 paragraphs and should be largely self contained",
+            "content": "You are a extremely funny story teller, prone to embellishment and self deprecation. You will follow ALL given instructions.  Add a sprinkling of pop culture throughout",
             "role": "system"
           },
           {
-            "content": "Tell a story about when your family got their two new Labradors, 'Alphy' and 'Riley",
+            "content": "Tell a story about when a character called Esteban and the rest of humanity got transferred into a Dungeons and Dragons style Dungeon and had to fight for their lives. Base this in the year 2020, and assume that it was aliens that caused all of humanity to be forced into this game where dying is final. This is the first chapter.",
             "role": "user"
           }
         ],
@@ -20,11 +20,11 @@
         "persistent": true
       },
       {
-        "description": "Continue the story 2",
+        "description": "Expand upon the story 2",
         "include_sources": false,
         "messages": [
           {
-            "content": "Continue the story, about a day that Jim and Sam accidentally scratched a car",
+            "content": "Expand upon the story by writing a new chapter and assume that there will be another chapter after this one",
             "role": "user"
           }
         ],
@@ -33,11 +33,11 @@
         "persistent": true
       },
       {
-        "description": "Continue the story 3",
+        "description": "Expand upon the story 3",
         "include_sources": false,
         "messages": [
           {
-            "content": "Continue the story, about a day that Sandy had her 9th birthday",
+            "content": "Expand upon the story by writing a new chapter and assume that there will be another chapter after this one",
             "role": "user"
           }
         ],
@@ -46,11 +46,11 @@
         "persistent": true
       },
       {
-        "description": "Continue the story 4",
+        "description": "Expand upon the story 4",
         "include_sources": false,
         "messages": [
           {
-            "content": "Continue the story, about a day that Jenny quit her job",
+            "content": "Expand upon the story by writing a new chapter and assume that there will be another chapter after this one",
             "role": "user"
           }
         ],
@@ -59,11 +59,11 @@
         "persistent": true
       },
       {
-        "description": "Continue the story 5",
+        "description": "Expand upon the story 5",
         "include_sources": false,
         "messages": [
           {
-            "content": "Continue the story, about a day Steve had a mid life crisis",
+            "content": "Expand upon the story by writing a new chapter and assume that there will be another chapter after this one",
             "role": "user"
           }
         ],
@@ -72,11 +72,11 @@
         "persistent": true
       },
       {
-        "description": "Continue the story 6",
+        "description": "Expand upon the story 6",
         "include_sources": false,
         "messages": [
           {
-            "content": "Continue the story, about a day one of the dogs ran away",
+            "content": "Expand upon the story by writing a new chapter and assume that there will be another chapter after this one",
             "role": "user"
           }
         ],
@@ -85,11 +85,11 @@
         "persistent": true
       },
       {
-        "description": "Continue the story 7",
+        "description": "Expand upon the story 7",
         "include_sources": false,
         "messages": [
           {
-            "content": "Continue the story, about a day Sam turned 16 and started to learn to drive",
+            "content": "Expand upon the story by writing a new chapter and assume that there will be another chapter after this one",
             "role": "user"
           }
         ],
@@ -98,11 +98,11 @@
         "persistent": true
       },
       {
-        "description": "Continue the story 8",
+        "description": "Expand upon the story 8",
         "include_sources": false,
         "messages": [
           {
-            "content": "Continue the story, about a day that Jim started flying lessons",
+            "content": "Expand upon the story by writing a new chapter and assume that there will be another chapter after this one",
             "role": "user"
           }
         ],
@@ -111,11 +111,11 @@
         "persistent": true
       },
       {
-        "description": "Continue the story 9",
+        "description": "Expand upon the story 9",
         "include_sources": false,
         "messages": [
           {
-            "content": "Continue the story, about a day that Jenny got a new job",
+            "content": "Expand upon the story by writing a new chapter and assume that there will be another chapter after this one",
             "role": "user"
           }
         ],
@@ -124,11 +124,11 @@
         "persistent": true
       },
       {
-        "description": "Continue the story 10",
+        "description": "Expand upon the story 10",
         "include_sources": false,
         "messages": [
           {
-            "content": "Continue the story, when the family went to the beach",
+            "content": "Finish the story",
             "role": "user"
           }
         ],
