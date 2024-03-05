@@ -5,10 +5,11 @@ usage example
 python main.py --hostname 127.0.0.1 --port 8001 --file ingest_test.json --verbose
 
 ENV_VARS
-* --hostname", default="localhost", help="Hostname (default: localhost)"
-* --port", type=int, default=8001, help="Port (default: 8001)"
+* --hostname, default="localhost", help="Hostname (default: localhost)"
+* --port, type=int, default=8001, help="Port (default: 8001)"
 * --verbose", action="store_true", help="Verbose output"
-* --file", default="data.json", help="test filename and path (default: data.json)"
+* --file, default="data.json", help="test filename and path (default: data.json)"
+* "--debug, action="store_true", help="Extra Verbose output"
 
 Relating to Chat/Completions, there are several options that you can modify.
 
@@ -18,9 +19,24 @@ Relating to Chat/Completions, there are several options that you can modify.
 * "use_context": "boolean" # will use ingested data if enabled
 * "persistent": "boolean" # will pass on previous chat to the engine (may be glitchy)
 
+### What I am playing with (Steve)
 
-test examples
-These can be chained, for example, first ingest, then query, then remove ingest
+I am using "the_dungeon.json" as my testing platform, currently testing the following areas:
+
+* using llm:
+*    mode: llamacpp
+*    max_new_tokens: 2048
+*    context_window: 30000
+*    tokenizer: mistralai/Mistral-7B-Instruct-v0.2
+
+* I am testing different values for max_new_tokens and context_window. I see interesting issues when using lower values, such as 256/3900, like it giving up and doing maths puzzles.
+* I am testing chaining of conversation, to ensure that no context is lost.
+* I am starting to play with using the engine to review previous chat and remove less relevant information to keep the token count down.
+
+
+
+
+# Workflow items
 
 ## Completions
 ### Not normally used, likely want to use chat/completions

@@ -11,7 +11,7 @@
             "role": "system"
           },
           {
-            "content": "Tell a story about when a character called Esteban and the rest of humanity got transferred into a Dungeons and Dragons style Dungeon and had to fight for their lives. Base this in the year 2020, and assume that it was aliens that caused all of humanity to be forced into this game where dying is final. This is the first chapter.",
+            "content": "write the first chapter in a story about when a character called Esteban, who with the rest of humanity got transferred into a Dungeons and Dragons style Dungeon and had to fight for their lives. Base this in the year 2020, and assume that it was aliens that caused all of humanity to be forced into this game where dying is final.",
             "role": "user"
           }
         ],
