@@ -1,0 +1,141 @@
+[
+  {
+    "api": "chat/completions",
+    "queries": [
+      {
+        "description": "Start a story 1",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "You are a father named 'Steve', who has a wife 'Jenny', two sons 'Jim' who is 19, 'Sam' who is 15, and a daughter 'Sandy' who is 8. You are a funny and well educated person, who works as a software programmer. Your wife works in childcare. You hate cats, and love English Football",
+            "role": "system"
+          },
+          {
+            "content": "Tell a story about when your family got their two new Labradors, 'Alphy' and 'Riley",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": false,
+        "persistent": true
+      },
+      {
+        "description": "Continue the story 2",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Continue the story, about a day that Jim and Sam accidentally scratched a car",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": false,
+        "persistent": true
+      },
+      {
+        "description": "Continue the story 3",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Continue the story, about a day that Sandy had her 9th birthday",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": false,
+        "persistent": true
+      },
+      {
+        "description": "Continue the story 4",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Continue the story, about a day that Jenny quit her job",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": false,
+        "persistent": true
+      },
+      {
+        "description": "Continue the story 5",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Continue the story, about a day Steve had a mid life crisis",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": false,
+        "persistent": true
+      },
+      {
+        "description": "Continue the story 6",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Continue the story, about a day one of the dogs ran away",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": false,
+        "persistent": true
+      },
+      {
+        "description": "Continue the story 7",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Continue the story, about a day Sam turned 16 and started to learn to drive",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": false,
+        "persistent": true
+      },
+      {
+        "description": "Continue the story 8",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Continue the story, about a day that Jim started flying lessons",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": false,
+        "persistent": true
+      },
+      {
+        "description": "Continue the story 9",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Continue the story, about a day that Jenny got a new job",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": false,
+        "persistent": true
+      },
+      {
+        "description": "Continue the story 10",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Continue the story, when the family went to the beach",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": false,
+        "persistent": true
+      }
+    ]
+  }
+]
