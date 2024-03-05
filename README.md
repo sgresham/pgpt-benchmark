@@ -21,8 +21,10 @@ Relating to Chat/Completions, there are several options that you can modify.
 
 ### What I am playing with (Steve)
 
-I am using "the_dungeon.json" as my testing platform, currently testing the following areas:
+I am using "the_dungeon.json" as my testing platform
+### Command to execute : python main.py --hostname 127.0.0.1 --port 8001 --file tests/the_dungeon.json --verbose
 
+### currently testing the following areas:
 * using llm:
 *    mode: llamacpp
 *    max_new_tokens: 2048
