@@ -1,0 +1,128 @@
+[
+  {
+    "api": "ingest/file",
+    "queries": [
+      {
+        "description": "sprint-plan",
+        "file": "personal/sprint-plan.csv"
+      },
+      {
+        "description": "sprint-guide",
+        "file": "personal/sprint-guide.txt"
+      }
+    ]
+  },
+  {
+    "api": "chat/completions",
+    "queries": [
+      {
+        "description": "Summarize the sprint-plan",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Be accurate, be concise, no greetings, translations, or salutations.",
+            "role": "system"
+          },
+          {
+            "content": "use sprint-guide.txt for your instructions",
+            "role": "assistant"
+          },
+          {
+            "content": "Provide an executive summary using simple words for sprint-plan.csv highlighting the need for the activities. Provide a high-level summary of the business need and outcomes sought and total story points ",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": true,
+        "persistent": true
+      },
+      {
+        "description": "Technical detail summary for the sprint-plan",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Create a table with each Story ID, title, description, assignment and story points",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": true,
+        "persistent": true
+      },
+      {
+        "description": "categorize for each row based on your understanding of the story",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "group each story under categories based on your understanding of the story",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": true,
+        "persistent": true
+      },
+      {
+        "description": "Benefits realization",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Include a list detailing the benefits which will be achieved executed through the stories delivered",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": true,
+        "persistent": true
+      },
+      {
+        "description": "Resourcing requirements ",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Add commentary here for any specific information relevant to the fixed squad resourcing outside of this squad",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": true,
+        "persistent": true
+      },
+      {
+        "description": "Financial Analysis",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Capture the financial costs for this sprint. Assume that each staff member has 20 days availability, and any availability outside of sprints would be classified as business as usual. Assume cost of $900 per day",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": true,
+        "persistent": true
+      }
+    ]
+  },
+  {
+    "api": "output/docx",
+    "queries": [
+      {
+        "description": "Output results to sprint_plan.docx",
+        "file_name": "output/sprint_plan.docx"
+      }
+    ]
+  },
+  {
+    "api": "ingest/delete",
+    "queries": [
+      {
+        "description": "delete specific ingested file",
+        "file": "sprint-plan.csv"
+      },
+      {
+        "description": "delete specific ingested file",
+        "file": "sprint-guide.txt"
+      }
+    ]
+  }
+]

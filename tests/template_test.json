@@ -1,0 +1,34 @@
+[
+  {
+    "api": "chat/completions",
+    "queries": [
+      {
+        "description": "Generate data for template",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "You are to generate a dict of keys and values which will be consumed later. Format in {'keyname': 'value', 'keyname2':'value2'}. Be accurate, be concise, no greetings, translations, or salutations. Do not give alternatives, examples or explanations.",
+            "role": "system"
+          },
+          {
+            "content": "create random values for keys 'squad_name' and 'sprint_month' where squad name is from norse mythology and sprint month includes a year at the end.",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": false,
+        "persistent": true
+      }
+    ]
+  },
+  {
+    "api": "generator/docx_template",
+    "queries": [
+      {
+        "description": "Generate context for template",
+        "template_docx": "BSI Monthly Sprint ATS - AI Template.docx",
+        "output_filename": "test_template.docx"
+      }
+    ]
+  }  
+]

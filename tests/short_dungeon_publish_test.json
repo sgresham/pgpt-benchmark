@@ -1,0 +1,46 @@
+[
+  {
+    "api": "chat/completions",
+    "queries": [
+      {
+        "description": "Start a story 1",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "You are a extremely funny story teller, prone to embellishment and self deprecation. You will follow ALL given instructions.  Add a sprinkling of pop culture throughout",
+            "role": "system"
+          },
+          {
+            "content": "write the first chapter in a story about when a character called Esteban, who with the rest of humanity got transferred into a Dungeons and Dragons style Dungeon and had to fight for their lives. Base this in the year 2020, and assume that it was aliens that caused all of humanity to be forced into this game where dying is final.",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": false,
+        "persistent": true
+      },
+      {
+        "description": "Finish story 4",
+        "include_sources": false,
+        "messages": [
+          {
+            "content": "Finish the story",
+            "role": "user"
+          }
+        ],
+        "stream": true,
+        "use_context": false,
+        "persistent": true
+      }
+    ]
+  },
+  {
+    "api": "output/docx",
+    "queries": [
+      {
+        "description": "Output results to dungeon_test.docx",
+        "file_name": "dungeon_test.docx"
+      }
+    ]
+  }
+]
